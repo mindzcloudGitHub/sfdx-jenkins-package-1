@@ -5,7 +5,7 @@ import groovy.json.JsonSlurperClassic
 node {
 
     //def SF_CONSUMER_KEY=env.CONNECTED_APP_CONSUMER_KEY_DH
-    def SF_CONSUMER_KEY=="3MVG9n_HvETGhr3CIZVAQdHYTNhPvX.DFYU.AAauOXrt9ZuJBGAW4I0GZnh.OJNxeC.7Pr4sul6h6W0Gf9Aid"
+    def SF_CONSUMER_KEY="3MVG9n_HvETGhr3CIZVAQdHYTNhPvX.DFYU.AAauOXrt9ZuJBGAW4I0GZnh.OJNxeC.7Pr4sul6h6W0Gf9Aid"
     //def SF_USERNAME=env.HUB_ORG_DH
     def SF_USERNAME="cicd@mindzcloud.com"
     //def SERVER_KEY_CREDENTALS_ID=env.JWT_CRED_ID_DH
