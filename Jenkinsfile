@@ -9,7 +9,7 @@ node {
     //def SF_USERNAME=env.HUB_ORG_DH
     def SF_USERNAME='cicd@mindzcloud.com'
     //def SERVER_KEY_CREDENTALS_ID=env.JWT_CRED_ID_DH
-    def SERVER_KEY_CREDENTALS_ID='2e7e39c5-ddf9-4437-bc91-e503b901ad45'
+    def SERVER_KEY_CREDENTALS_ID='705a48dd-5b90-4d56-bd37-852c2763ae59'
     def TEST_LEVEL='RunLocalTests'
     def PACKAGE_NAME='0Ho1U000000CaUzSAK'
     def PACKAGE_VERSION
