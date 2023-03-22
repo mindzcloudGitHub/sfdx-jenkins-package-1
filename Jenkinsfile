@@ -52,7 +52,7 @@ echo "-------------------------------------------------------------------------"
 //
 //   https://developer.salesforce.com/docs/atlas.en-us.sfdx_dev.meta/sfdx_dev/sfdx_dev_auth_jwt_flow.htm
 
-$WORKSPACE_DIR/node_modules/.bin/sfdx force:auth:jwt:grant --clientid $CLIENT_ID \
+$WORKSPACE_DIR/node_modules/bin/sfdx force:auth:jwt:grant --clientid $CLIENT_ID \
 --jwtkeyfile $JWT_KEY_FILE --username $CI_USERNAME \
 --instanceurl $INSTANCE_URL
 
@@ -84,7 +84,7 @@ echo "-------------------------------------------------------------------------"
 export WAIT_TIME_MINS=60
 
 SFDX_DISABLE_INSIGHTS=true \
-$WORKSPACE_DIR/node_modules/.bin/sfdx force:mdapi:deploy --deploydir $METADATA_API_DIR \
+$WORKSPACE_DIR/node_modules/bin/sfdx force:mdapi:deploy --deploydir $METADATA_API_DIR \
 --targetusername $CI_USERNAME \
 --wait $WAIT_TIME_MINS \
 --soapdeploy
