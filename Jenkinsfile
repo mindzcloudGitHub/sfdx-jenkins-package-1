@@ -35,7 +35,7 @@ echo "-------------------------------------------------------------------------"
 
 npm install sfdx-cli//@7.119.3
 echo "Installed SFDC CLI Version:"
-$WORKSPACE_DIR/node_modules/bin/sfdx --version
+$WORKSPACE_DIR/node_modules/bin/sfdx -version
 echo "done"
 
 echo "-------------------------------------------------------------------------"
