@@ -32,7 +32,7 @@ node {
     // JWT key credentials.
     // -------------------------------------------------------------------------
     
-    /*withEnv(["HOME=${env.WORKSPACE}"]) {
+    withEnv(["HOME=${env.WORKSPACE}"]) {
         
         withCredentials([file(credentialsId: SERVER_KEY_CREDENTALS_ID, variable: 'server_key_file')]) {
 
@@ -46,13 +46,13 @@ node {
                     error 'Salesforce dev hub org authorization failed.'
                 }
             }
-
+        }}
 
             // -------------------------------------------------------------------------
             // Create new scratch org to test your code.
             // -------------------------------------------------------------------------
 
-            stage('Create Test Scratch Org') {
+           /* stage('Create Test Scratch Org') {
                 rc = command "${toolbelt}/sfdx force:org:create --targetdevhubusername HubOrg --setdefaultusername --definitionfile config/project-scratch-def.json --setalias ciorg --wait 10 --durationdays 1"
                 if (rc != 0) {
                     error 'Salesforce test scratch org creation failed.'
