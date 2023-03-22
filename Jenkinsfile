@@ -33,7 +33,7 @@ echo "-------------------------------------------------------------------------"
 // https://developer.salesforce.com/docs/atlas.en-us.sfdx_setup.meta/sfdx_setup/sfdx_setup_install_cli.htm//sfdx_setup_install_cli_npm
 // NOTE: npm proxy not needed,
 
-npm install sfdx-cli@7.119.3
+npm install sfdx-cli//@7.119.3
 echo "Installed SFDC CLI Version:"
 $WORKSPACE_DIR/node_modules/.bin/sfdx --version
 echo "done"
