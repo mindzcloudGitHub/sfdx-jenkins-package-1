@@ -20,7 +20,7 @@ node {
 // JWT_KEY_FILE does not need to be updated on refresh. Same cert can be installed in multiple orgs,
 // so this most likely does not need to be updated
   export JWT_KEY_FILE="2e7e39c5-ddf9-4437-bc91-e503b901ad45"
-  export WORKSPACE_DIR=`pwd`
+  export WORKSPACE_DIR='pwd'
   export PATH_TO_SOURCE="$WORKSPACE_DIR"
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
