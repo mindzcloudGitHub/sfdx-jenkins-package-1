@@ -35,7 +35,7 @@ echo "-------------------------------------------------------------------------"
 
 npm install sfdx-cli  //@7.119.3
 echo "Installed SFDC CLI Version:"
-$WORKSPACE_DIR/node_modules/.bin/sfdx -version
+$WORKSPACE_DIR/node_modules/bin/sfdx -version
 echo "done"
 
 echo "-------------------------------------------------------------------------"
@@ -52,7 +52,7 @@ echo "-------------------------------------------------------------------------"
 //
 //   https://developer.salesforce.com/docs/atlas.en-us.sfdx_dev.meta/sfdx_dev/sfdx_dev_auth_jwt_flow.htm
 
-$WORKSPACE_DIR/node_modules/.bin/sfdx force:auth:jwt:grant --clientid $CLIENT_ID \
+$WORKSPACE_DIR/node_modules/bin/sfdx force:auth:jwt:grant --clientid $CLIENT_ID \
 --jwtkeyfile $JWT_KEY_FILE --username $CI_USERNAME \
 --instanceurl $INSTANCE_URL
 
@@ -68,7 +68,7 @@ echo "-------------------------------------------------------------------------"
 export METADATA_API_DIR="mdapi_output_dir"
 cd $PATH_TO_SOURCE
 echo "Current dir:" 'pwd'
-$WORKSPACE_DIR/node_modules/.bin/sfdx force:source:convert -d $METADATA_API_DIR
+$WORKSPACE_DIR/node_modules/bin/sfdx force:source:convert -d $METADATA_API_DIR
 echo "Metadata directory generated contents:"
 ls -lR $METADATA_API_DIR
 echo "done"
