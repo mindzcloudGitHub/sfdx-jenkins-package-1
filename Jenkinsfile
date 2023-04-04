@@ -9,7 +9,7 @@ node {
     def SF_USERNAME=env.HUB_ORG_DH
    // def SF_USERNAME='cicd@mindzcloud.com'
     def SERVER_KEY_CREDENTALS_ID=env.JWT_CRED_ID_DH
-    //def SERVER_KEY_CREDENTALS_ID='2e7e39c5-ddf9-4437-bc91-e503b901ad45'
+    //def SERVER_KEY_CREDENTALS_ID='99b23b4a-15fc-45a4-bd94-951bad63468b'
     def TEST_LEVEL='RunLocalTests'
     def PACKAGE_NAME='0Ho1U000000CaUzSAK'
     def PACKAGE_VERSION
@@ -42,7 +42,8 @@ node {
 
             stage('Authorize DevHub') {
                 
-                rc = command "\"${toolbelt}\sfdx\" force:auth:jwt:grant --instanceurl ${SF_INSTANCE_URL} --clientid ${SF_CONSUMER_KEY} --username ${SF_USERNAME} --jwtkeyfile ${server_key_file} --setdefaultdevhubusername --setalias HubOrg"
+               // rc = command "\"${toolbelt}\sfdx\" force:auth:jwt:grant --instanceurl ${SF_INSTANCE_URL} --clientid ${SF_CONSUMER_KEY} --username ${SF_USERNAME} --jwtkeyfile ${server_key_file} --setdefaultdevhubusername --setalias HubOrg"
+               rc = $WORKSPACE_DIR/node_modules/bin/sfdx force:auth:jwt:grant --clientid ${SF_CONSUMER_KEY} --jwtkeyfile ${server_key_file} --username ${SF_USERNAME} --instanceurl ${SF_INSTANCE_URL}
                 //rc = command "${toolbelt}/sfdx force:auth:jwt:grant --instanceurl ${SF_INSTANCE_URL} --clientid ${SF_CONSUMER_KEY} --username ${SF_USERNAME} --jwtkeyfile ${server_key_file} --setdefaultdevhubusername --setalias HubOrg"
                 echo "rc"+rc
                 if (rc != 0) {
