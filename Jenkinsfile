@@ -39,11 +39,13 @@ node {
             // -------------------------------------------------------------------------
             // Authorize the Dev Hub org with JWT key and give it an alias.
             // -------------------------------------------------------------------------
-
-            stage('Authorize DevHub') {
+        }
+        rc = $WORKSPACE_DIR/node_modules/bin/sfdx force:auth:jwt:grant --clientid ${SF_CONSUMER_KEY} --jwtkeyfile ${server_key_file} --username ${SF_USERNAME} --instanceurl ${SF_INSTANCE_URL}
+        Node{  
+        stage('Authorize DevHub') {
                 
                // rc = command "\"${toolbelt}\sfdx\" force:auth:jwt:grant --instanceurl ${SF_INSTANCE_URL} --clientid ${SF_CONSUMER_KEY} --username ${SF_USERNAME} --jwtkeyfile ${server_key_file} --setdefaultdevhubusername --setalias HubOrg"
-               rc = $WORKSPACE_DIR/node_modules/bin/sfdx force:auth:jwt:grant --clientid ${SF_CONSUMER_KEY} --jwtkeyfile ${server_key_file} --username ${SF_USERNAME} --instanceurl ${SF_INSTANCE_URL}
+              // rc = $WORKSPACE_DIR/node_modules/bin/sfdx force:auth:jwt:grant --clientid ${SF_CONSUMER_KEY} --jwtkeyfile ${server_key_file} --username ${SF_USERNAME} --instanceurl ${SF_INSTANCE_URL}
                 //rc = command "${toolbelt}/sfdx force:auth:jwt:grant --instanceurl ${SF_INSTANCE_URL} --clientid ${SF_CONSUMER_KEY} --username ${SF_USERNAME} --jwtkeyfile ${server_key_file} --setdefaultdevhubusername --setalias HubOrg"
                 echo "rc"+rc
                 if (rc != 0) {
@@ -51,6 +53,7 @@ node {
                 }
             }
         }}
+}
 
             // -------------------------------------------------------------------------
             // Create new scratch org to test your code.
@@ -206,4 +209,4 @@ def command(script) {
     } else {
         return bat(returnStatus: true, script: script);
     }*/
-}
+//}
