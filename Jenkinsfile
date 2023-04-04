@@ -16,7 +16,7 @@ node {
     def SF_INSTANCE_URL = env.SFDC_HOST_DH ?: "https://login.salesforce.com"
      //def SF_INSTANCE_URL ='https://login.salesforce.com'
     //def toolbelt = tool 'sfdx'
-    def toolbelt = tool 'C:\Program Files\sfdx\bin'
+    def toolbelt = tool 'toolbelt'
 
 
     // -------------------------------------------------------------------------
