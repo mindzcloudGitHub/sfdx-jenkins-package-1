@@ -51,7 +51,7 @@ echo "-------------------------------------------------------------------------"
 // Supporting SFDC documentation
 //
 //   https://developer.salesforce.com/docs/atlas.en-us.sfdx_dev.meta/sfdx_dev/sfdx_dev_auth_jwt_flow.htm
-}
+
 $WORKSPACE_DIR/node_modules/bin/sfdx force:auth:jwt:grant --clientid $CLIENT_ID \
 --jwtkeyfile $JWT_KEY_FILE --username $CI_USERNAME \
 --instanceurl $INSTANCE_URL
@@ -88,4 +88,4 @@ $WORKSPACE_DIR/node_modules/bin/sfdx force:mdapi:deploy --deploydir $METADATA_AP
 --targetusername $CI_USERNAME \
 --wait $WAIT_TIME_MINS \
 --soapdeploy
-//}
+}
